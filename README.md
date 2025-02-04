@@ -6,3 +6,4 @@ according to the task
 # Authors & Contact Information
 
 - Max Rudi Karl Womatschka - [Github](https://github.com/DataWojtek) - max.womatschka@tu-dortmund.de
+- Arthur Weber - [Github](https://github.com/ArthurWbr) - aw05@web.de
