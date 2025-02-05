@@ -1,7 +1,12 @@
 # Overview
 
 This project will use the popular titanic dataset and make changes to it 
-according to the task
+according to the task.
+
+# Setup
+
+Before you start, set the working directory in RStudio to the  
+**Titanic-Group-B** project folder.
 
 # Authors & Contact Information
 

@@ -1,4 +1,7 @@
+# Task 1
 
+# Working directionary
+setwd()
 
 
 install.packages("stringr")
