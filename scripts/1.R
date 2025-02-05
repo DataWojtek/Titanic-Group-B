@@ -46,6 +46,10 @@ titanic$Survived <- as.factor(titanic$Survived)
 titanic$Sex      <- as.factor(titanic$Sex)
 titanic$Embarked <- as.factor(titanic$Embarked)
 
+### 1.3 Transfer Pclass to an ordered factor
+
+titanic$Pclass <- factor(titanic$Pclass, levels = 1:3, ordered = TRUE)
+
 
 
 ### 1.4 Impute missing age values with the mean age of the form of address
@@ -165,18 +169,3 @@ titanic <- titanic %>% select(-PassengerId, -Name, -Ticket, -Cabin)
 # you can proceed
 
 # save(titanic, file = "data/processed_titanic.RData")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
