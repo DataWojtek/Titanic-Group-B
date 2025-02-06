@@ -23,11 +23,9 @@ jobs:
 
       - name: Install lintr if needed
         run: |
-          if (!requireNamespace("lintr", quietly = TRUE)) {
-            install.packages("lintr")
-          }
+          Rscript -e "if (!requireNamespace('lintr', quietly = TRUE)) install.packages('lintr')"
 
-      - name: Load lintr package
+      - name: Load lintr
         run: |
           Rscript -e "library(lintr)"
 
