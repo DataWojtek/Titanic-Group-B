@@ -1,7 +1,8 @@
 # Overview
 
-This project will use the popular titanic dataset and make changes to it 
-according to the task.
+This project will use the popular Titanic dataset and make modifications to it 
+according to the tasks provided in the designated folder. 
+The project will include processing of the Titanic dataset, descriptive statistics, and corresponding visualizations.
 
 # Setup
 
