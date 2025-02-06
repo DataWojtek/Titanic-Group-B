@@ -14,7 +14,7 @@ source("scripts/2_2.R")
 
 ### 2.1.1 - Descriptive statistics for metric variables
 
-
+# test
 
 ### 2.1.2 - Descriptive statistics for categorial variables
 
