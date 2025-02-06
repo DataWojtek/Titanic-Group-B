@@ -8,6 +8,8 @@ source("packages.R")
 # load the processed dataframe
 load("data/processed_titanic.RData")
 
+# load the file
+source("scripts/2_2.R")
 
 
 ### 2.1.1 - Descriptive statistics for metric variables
