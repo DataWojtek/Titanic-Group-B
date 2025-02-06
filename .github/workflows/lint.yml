@@ -21,9 +21,15 @@ jobs:
         with:
           r-version: '4.2'
 
-      - name: Install dependencies
+      - name: Install lintr if needed
         run: |
-          install.packages("lintr")
+          if (!requireNamespace("lintr", quietly = TRUE)) {
+            install.packages("lintr")
+          }
+
+      - name: Load lintr package
+        run: |
+          Rscript -e "library(lintr)"
 
       - name: Run lintr
         run: |
