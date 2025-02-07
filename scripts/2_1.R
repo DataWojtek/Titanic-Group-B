@@ -46,7 +46,8 @@ source("scripts/2_2.R")
 stat_age_survived <- function(alpha = 0.05)
 {
   # check input
-  
+  stopifnot(is.numeric(alpha), is.vector(alpha), length(alpha) == 1, alpha > 0,
+            alpha <= 1)
   
   # divide the age in survived or not survived
   age_died     <- titanic$Age[titanic$Survived == 0]
@@ -55,10 +56,8 @@ stat_age_survived <- function(alpha = 0.05)
   # list for the simple stats for both groups (maybe a candidate for an internal
   # function)
   # 1 stands for died and 2 for survived
-  age_dors <- list(means = c(mean(age_died), mean(age_survived)),
-                   medians = c(median(age_died), median(age_survived)),
-                   vars = c(var(age_died), var(age_survived)),
-                   sds = c(sd(age_died), sd(age_survived)))
+  
+  age_dors <- stats_simple(age_died, age_survived)
   # $means = 30.63, 28.26
   # $medians = 32, 28
   # $vars = 160.10, 198.19
