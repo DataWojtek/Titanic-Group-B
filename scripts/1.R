@@ -75,12 +75,16 @@ titanic <- titanic %>%
 
 # mean age of a master
 mean_age_master <- mean(na.omit(
-                        titanic$Age[grep(",\\s*Master\\.",titanic$Name)])) # ~5
+                        titanic$Age[grep(",\\s*Master\\.",titanic$Name)])) 
+# 4.57
 
-# impute the missing ages of masters with 5
+# impute the missing ages of masters with 4.57
 titanic <- titanic %>%
   mutate(Age = ifelse(grepl(",\\s*Master\\.", Name) & 
-                            is.na(Age), round(mean_age_master), Age))
+                            is.na(Age), mean_age_master, Age))
+
+# the mean age is not rounded because the masters tend to be very young which 
+# causes their age to have decimals
 
 
 ## misses
