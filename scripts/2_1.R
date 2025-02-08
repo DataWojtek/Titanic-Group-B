@@ -14,6 +14,71 @@ source("scripts/2_2.R")
 
 ### 2.1.1 - Descriptive statistics for metric variables
 
+metric<-function(){
+  
+  #titanic$Survived
+  print("Number of survivers")
+  print(sum(as.numeric(titanic$Survived)-1))
+  print("Number of survivers in percent")
+  wert<-round((mean(as.numeric(titanic$Survived)-1))*100,1)
+  print(paste0(wert, "%"))
+  
+  #prints the number of survivers and the percentage of all pasengers, that survived
+  
+  #titanic$Pclass
+  print("Average class")
+  print(mean(as.numeric(titanic$Pclass)))
+  print("Distribution of classes")
+  print("1       2       3")
+  print(paste0(round(prop.table(table(titanic$Pclass)), 2), "%"))
+  
+  #prints the  aveerage class, aswell as the distribution of all classes on board
+  
+  #titanic$Age
+  print("Range of Ages")
+  print(paste("Min:",min(titanic$Age) , "| Max:", max(titanic$Age)))
+  print("Average age")
+  print(mean(titanic$Age))
+  print("Most commom age")
+  print(median(titanic$Age))
+  
+  #prints the min and max age of the passengers and the mean and median age
+  
+  #titanic$SibSp
+  print("Range of siblings and spouses brought")
+  print(paste("Min:",min(titanic$SibSp) , "| Max:", max(titanic$SibSp)))
+  print("Average number of siblings and spouses brought")
+  print(mean(titanic$SibSp))
+  print("Most commom number of siblings and spouses brought")
+  print(median(titanic$SibSp))
+  
+  #prints the min, max mean and modus of the number of spouses or siblings brought
+  
+  #titanic$Parch
+  print("Range of parents and children brought")
+  print(paste("Min:",min(titanic$Parch) , "| Max:", max(titanic$Parch)))
+  print("Average number of parents and children brought")
+  print(mean(titanic$Parch))
+  print("Most commom number of parents and children brought")
+  print(median(titanic$Parch))
+  
+  #prints the min, max mean and modus of the number of parents and children brought
+  
+  #titanic$Fare
+  print("Range of ticket costs")
+  print(paste("Min:",min(titanic$Fare) , "| Max:", max(titanic$Fare)))
+  print("Average ticket cost")
+  print(mean(titanic$Fare))
+  print("Average cost for first class")
+  print(mean(titanic[titanic$Pclass == 1, ]$Fare))
+  print("Average cost for second class")
+  print(mean(titanic[titanic$Pclass == 2, ]$Fare))
+  print("Average cost for third class")
+  print(mean(titanic[titanic$Pclass == 3, ]$Fare))
+  
+  #prints the range of prices, aswell as the average price for all 
+  #classes and individual classes
+}
 
 
 ### 2.1.2 - Descriptive statistics for categorial variables
