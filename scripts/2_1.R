@@ -82,7 +82,28 @@ metric<-function(){
 
 
 ### 2.1.2 - Descriptive statistics for categorial variables
+describe_categorical_vars <- function() {  
+  # Define a vector containing the categorical variables to analyze  
+  categorical_vars <- c("Sex", "Pclass", "Embarked", "Survived")  
+  
+  # Loop through each categorical variable  
+  for (var in categorical_vars) {  
+    # Print the name of the variable being analyzed  
+    print(paste("Distribution of", var))  
+    
+    # Print the frequency distribution of the variable, including NA values  
+    print(table(titanic[[var]], useNA = "ifany"))  
+    
+    # Print a label before showing the percentage distribution  
+    print("Percentage distribution")  
+    
+    # Calculate and print the proportion of each category  
+    print(prop.table(table(titanic[[var]])))  
+  }  
+}  
 
+# Call the function to execute the analysis  
+describe_categorical_vars()  
 
 
 ### 2.1.3 - Descriptive statistic for the relationship between two categorial
@@ -182,5 +203,18 @@ stat_age_survived <- function(alpha = 0.05)
 
 ### 2.1.6 - Optional: Additional functions for descriptive statistics or 
 ###         visualizations
+plot_age_distribution <- function() {  # Define a function to plot age distribution
+  library(ggplot2)  # Load the ggplot2 package for visualization
+  
+  ggplot(titanic, aes(x = Age, fill = as.factor(Survived))) +  # Create a ggplot with Age on x-axis and color by Survived status
+    geom_histogram(binwidth = 5, alpha = 0.7, position = "identity") +  # Plot a histogram with bins of width 5, set transparency, and overlay bars
+    labs(title = "Age Distribution by Survival Status",  # Set the title of the plot
+         x = "Age",  # Label for x-axis
+         y = "Count",  # Label for y-axis
+         fill = "Survived")  # Legend label for the fill color
+}
+
+plot_age_distribution()  # Call the function to generate the plot
 
 
+  
