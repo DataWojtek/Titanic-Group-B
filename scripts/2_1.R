@@ -102,9 +102,6 @@ describe_categorical_vars <- function() {
   }  
 }  
 
-# Call the function to execute the analysis  
-describe_categorical_vars()  
-
 
 ### 2.1.3 - Descriptive statistic for the relationship between two categorial
 ###         variables
@@ -214,7 +211,6 @@ plot_age_distribution <- function() {  # Define a function to plot age distribut
          fill = "Survived")  # Legend label for the fill color
 }
 
-plot_age_distribution()  # Call the function to generate the plot
 
 
   
