@@ -194,6 +194,18 @@ stat_age_survived <- function(alpha = 0.05)
 
 ### 2.1.6 - Optional: Additional functions for descriptive statistics or 
 ###         visualizations
+plot_age_distribution <- function() {  # Define a function to plot age distribution
+  library(ggplot2)  # Load the ggplot2 package for visualization
+  
+  ggplot(titanic, aes(x = Age, fill = as.factor(Survived))) +  # Create a ggplot with Age on x-axis and color by Survived status
+    geom_histogram(binwidth = 5, alpha = 0.7, position = "identity") +  # Plot a histogram with bins of width 5, set transparency, and overlay bars
+    labs(title = "Age Distribution by Survival Status",  # Set the title of the plot
+         x = "Age",  # Label for x-axis
+         y = "Count",  # Label for y-axis
+         fill = "Survived")  # Legend label for the fill color
+}
+
+plot_age_distribution()  # Call the function to generate the plot
 
 
   
