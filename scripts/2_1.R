@@ -87,8 +87,18 @@ metric<-function(){
 
 ### 2.1.3 - Descriptive statistic for the relationship between two categorial
 ###         variables
+categorical_relationship <- function(var1, var2) {
+  print(paste("Contingency table for", var1, "and", var2))
+  contingency_table <- table(titanic[[var1]], titanic[[var2]])
+  print(contingency_table)
+  
+  print("Chi-square test results")
+  chi_test <- chisq.test(contingency_table)
+  print(chi_test)
+}
 
-
+categorical_relationship("Sex", "Survived")
+categorical_relationship("Pclass", "Survived")
 
 ### 2.1.4 - Descriptive statistic for the relationship between a metric and a
 ###         dichotomous variable
@@ -168,7 +178,6 @@ stat_age_survived <- function(alpha = 0.05)
 
 
 ### 2.1.5 - Visualization for three or four categorial variables
-
 
 
 ### 2.1.6 - Optional: Additional functions for descriptive statistics or 
