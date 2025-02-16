@@ -196,6 +196,7 @@ stat_age_survived <- function(alpha = 0.05) {
 
 
 ### 2.1.5 - Visualization for three or four categorial variables
+## to visualize the survival distribution of Titanic passengers based on passenger class and gender.
 visualize_categorical <- function() {
   library(ggplot2)
   ggplot(titanic, aes(x = Pclass, fill = Sex)) +
