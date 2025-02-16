@@ -168,6 +168,15 @@ stat_age_survived <- function(alpha = 0.05)
 
 
 ### 2.1.5 - Visualization for three or four categorial variables
+visualize_categorical <- function() {
+  library(ggplot2)
+  ggplot(titanic, aes(x = Pclass, fill = Sex)) +
+    geom_bar(position = "dodge") +
+    facet_wrap(~ Survived) +
+    labs(title = "Survival Rate by Class and Gender", x = "Passenger Class", y = "Count")
+}
+
+visualize_categorical()
 
 
 
