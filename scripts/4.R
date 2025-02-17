@@ -48,3 +48,18 @@ if (age_difference) {
 } else {
     print("No significant difference in age between survivors and non-survivors.")
 }
+
+### --- Visualizations ---
+cat("\n--- Generating Visualizations ---\n")
+
+# Survival distribution by class and gender
+visualize_categorical()
+
+# Age distribution by survival status
+plot_age_distribution()
+
+# Boxplot: Age distribution across different classes
+ggplot(titanic, aes(x = Pclass, y = Age, fill = Pclass)) +
+    geom_boxplot() +
+    labs(title = "Age Distribution by Passenger Class", x = "Passenger Class", y = "Age") +
+    theme_minimal()
