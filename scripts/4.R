@@ -63,3 +63,16 @@ ggplot(titanic, aes(x = Pclass, y = Age, fill = Pclass)) +
     geom_boxplot() +
     labs(title = "Age Distribution by Passenger Class", x = "Passenger Class", y = "Age") +
     theme_minimal()
+
+# Boxplot: Fare distribution across survival status
+ggplot(titanic, aes(x = as.factor(Survived), y = Fare, fill = as.factor(Survived))) +
+    geom_boxplot() +
+    labs(title = "Fare Distribution by Survival Status", x = "Survived", y = "Fare") +
+    theme_minimal()
+
+# Bar plot: Survival rate by Embarked location
+ggplot(titanic, aes(x = Embarked, fill = as.factor(Survived))) +
+    geom_bar(position = "fill") +
+    labs(title = "Survival Rate by Embarkation Point", x = "Embarked", y = "Proportion") +
+    scale_fill_discrete(name = "Survived") +
+    theme_minimal()
