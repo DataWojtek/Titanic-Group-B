@@ -2,15 +2,18 @@
 # Task 4
 
 # import and install required packages
-source("packages.R")
+source("~/GitHub/Titanic-Group-B/packages.R")
 
 
 # load the processed dataframe
-load("data/processed_titanic.RData")
+load("~/GitHub/Titanic-Group-B/data/processed_titanic.RData")
+
+source("~/GitHub/Titanic-Group-B/scripts/2_1.R")
 
 
 
 ### Task 4
+
 
 # Import relevant scripts containing functions
 source("scripts/2_1.R") # Functions for descriptive analysis

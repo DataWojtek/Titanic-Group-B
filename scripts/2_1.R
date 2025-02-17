@@ -104,18 +104,32 @@ describe_categorical_vars <- function() {
 
 ### 2.1.3 - Descriptive statistic for the relationship between two categorial
 ###         variables
-categorical_relationship <- function(var1, var2) {
-  print(paste("Contingency table for", var1, "and", var2))
-  contingency_table <- table(titanic[[var1]], titanic[[var2]])
-  print(contingency_table)
 
+# Function to analyze the relationship between two categorical variables
+categorical_relationship <- function(var1, var2) {
+  
+  # Print a message indicating which two variables are being analyzed
+  print(paste("Contingency table for", var1, "and", var2))
+  
+  # Create a contingency table between the two categorical variables
+  contingency_table <- table(titanic[[var1]], titanic[[var2]])
+
+  # Print the contingency table to see the frequency distribution
   print("Chi-square test results")
+  
+  # Perform a Chi-square test to check if there is a significant association
   chi_test <- chisq.test(contingency_table)
+  
+  # Print the results of the Chi-square test
   print(chi_test)
 }
 
+# Apply the function to analyze the relationship between Sex and Survived
 categorical_relationship("Sex", "Survived")
+
+# Apply the function to analyze the relationship between Passenger Class and Survived
 categorical_relationship("Pclass", "Survived")
+
 
 ### 2.1.4 - Descriptive statistic for the relationship between a metric and a
 ###         dichotomous variable
@@ -208,18 +222,25 @@ visualize_categorical <- function() {
     labs(title = "Survival Rate by Class and Gender", x = "Passenger Class", y = "Count")
 }
 
-visualize_categorical()
 
 ### 2.1.6 - Optional: Additional functions for descriptive statistics or
 ###         visualizations
-plot_age_distribution <- function() { # Define a function to plot age distribution
 
-  ggplot(titanic, aes(x = Age, fill = as.factor(Survived))) + # Create a ggplot with Age on x-axis and color by Survived status
-    geom_histogram(binwidth = 5, alpha = 0.7, position = "identity") + # Plot a histogram with bins of width 5, set transparency, and overlay bars
+# Define a function to plot age distribution
+plot_age_distribution <- function() { 
+
+  # Create a ggplot with Age on x-axis and color by Survived status
+  # Plot a histogram with bins of width 5, set transparency, and overlay bars
+  ggplot(titanic, aes(x = Age, fill = as.factor(Survived))) + 
+    geom_histogram(binwidth = 5, alpha = 0.7, position = "identity") + 
     labs(
-      title = "Age Distribution by Survival Status", # Set the title of the plot
-      x = "Age", # Label for x-axis
-      y = "Count", # Label for y-axis
+      # Set the title of the plot
+      title = "Age Distribution by Survival Status", 
+      # Label for x-axis
+      x = "Age", 
+      # Label for y-axis
+      y = "Count", 
+      # Legend label for the fill color
       fill = "Survived"
-    ) # Legend label for the fill color
+    ) 
 }
