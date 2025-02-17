@@ -11,6 +11,10 @@ load("~/GitHub/Titanic-Group-B/data/processed_titanic.RData")
 source("~/GitHub/Titanic-Group-B/scripts/2_1.R")
 
 
+
+### Task 4
+
+
 # Import relevant scripts containing functions
 source("scripts/2_1.R") # Functions for descriptive analysis
 source("scripts/2_2.R") # Helper functions
