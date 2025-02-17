@@ -15,3 +15,9 @@ load("data/processed_titanic.RData")
 # Import relevant scripts containing functions
 source("scripts/2_1.R") # Functions for descriptive analysis
 source("scripts/2_2.R") # Helper functions
+
+# Ensure categorical variables are factors
+titanic$Survived <- as.factor(titanic$Survived)
+titanic$Pclass <- as.factor(titanic$Pclass)
+titanic$Sex <- as.factor(titanic$Sex)
+titanic$Embarked <- as.factor(titanic$Embarked)
