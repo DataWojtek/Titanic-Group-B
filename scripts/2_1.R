@@ -208,7 +208,6 @@ visualize_categorical <- function() {
     labs(title = "Survival Rate by Class and Gender", x = "Passenger Class", y = "Count")
 }
 
-visualize_categorical()
 
 ### 2.1.6 - Optional: Additional functions for descriptive statistics or
 ###         visualizations
