@@ -16,3 +16,7 @@ titanic$Survived <- as.factor(titanic$Survived)
 titanic$Pclass <- as.factor(titanic$Pclass)
 titanic$Sex <- as.factor(titanic$Sex)
 titanic$Embarked <- as.factor(titanic$Embarked)
+
+# Run descriptive statistics for metric variables
+cat("\n--- Descriptive Statistics for Metric Variables ---\n")
+metric()
