@@ -2,7 +2,7 @@
 #              for this project
 
 # vector of the required packages of this project
-required_packages <- c("stringr", "dplyr", "tibble")
+required_packages <- c("stringr", "dplyr", "tibble", "ggplot2")
 
 # checks which packages are already installed
 new_packages <- required_packages[!(required_packages %in% 
