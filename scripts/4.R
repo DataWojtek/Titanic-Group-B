@@ -11,7 +11,7 @@ load("~/GitHub/Titanic-Group-B/data/processed_titanic.RData")
 source("~/GitHub/Titanic-Group-B/scripts/2_1.R")
 
 
-# Convert necessary columns to factors (categorical variables)
+# Convert necessary columns to factors (categorical variables) to perform chi-square test
 titanic$Survived <- as.factor(titanic$Survived)
 titanic$Pclass <- as.factor(titanic$Pclass)
 titanic$Sex <- as.factor(titanic$Sex)
