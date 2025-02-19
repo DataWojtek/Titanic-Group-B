@@ -13,24 +13,30 @@ source("~/GitHub/Titanic-Group-B/scripts/2_1.R")
 # import internal functions 
 source("~/GitHub/Titanic-Group-B/scripts/2_2.R")
 
+
 ### Task 4
 
 
-# Ensure categorical variables are factors
+### Task 4.1 Ensure categorical variables are factors
 titanic$Survived <- as.factor(titanic$Survived)
 titanic$Pclass <- as.factor(titanic$Pclass)
 titanic$Sex <- as.factor(titanic$Sex)
 titanic$Embarked <- as.factor(titanic$Embarked)
 
-### --- Descriptive Statistics for Metric Variables ---
+### Task 4.2 Descriptive Statistics for Metric Variables 
+
 cat("\n--- Descriptive Statistics for Metric Variables ---\n")
 metric()
 
-### --- Descriptive Statistics for Categorical Variables ---
+
+### Task 4.3 Descriptive Statistics for Categorical Variables
+
 cat("\n--- Descriptive Statistics for Categorical Variables ---\n")
 describe_categorical_vars()
 
-### --- Relationship Between Two Categorical Variables ---
+
+### Task 4.4 Relationship Between Two Categorical Variables
+
 cat("\n--- Relationship: Survival by Sex ---\n")
 categorical_relationship("Sex", "Survived")
 
@@ -40,7 +46,9 @@ categorical_relationship("Pclass", "Survived")
 cat("\n--- Relationship: Survival by Embarked Location ---\n")
 categorical_relationship("Embarked", "Survived")
 
-### --- Relationship Between a Metric and a Dichotomous Variable ---
+
+### Task 4.5 Relationship Between a Metric and a Dichotomous Variable 
+
 cat("\n--- Testing Age Difference Between Survivors and Non-Survivors ---\n")
 age_difference <- stat_age_survived()
 if (age_difference) {
@@ -49,7 +57,9 @@ if (age_difference) {
     print("No significant difference in age between survivors and non-survivors.")
 }
 
-### --- Visualizations ---
+
+### Task 4.6 Visualizations 
+
 cat("\n--- Generating Visualizations ---\n")
 
 # Survival distribution by class and gender
