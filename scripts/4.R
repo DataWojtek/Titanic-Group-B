@@ -4,12 +4,11 @@
 # import and install required packages
 source("~/GitHub/Titanic-Group-B/packages.R")
 
-
 # load the processed dataframe
 load("~/GitHub/Titanic-Group-B/data/processed_titanic.RData")
 
+# import the functions from script 2_1
 source("~/GitHub/Titanic-Group-B/scripts/2_1.R")
-
 
 
 ### Task 4
