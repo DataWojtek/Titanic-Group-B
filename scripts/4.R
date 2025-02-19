@@ -10,13 +10,11 @@ load("~/GitHub/Titanic-Group-B/data/processed_titanic.RData")
 # import the functions from script 2_1
 source("~/GitHub/Titanic-Group-B/scripts/2_1.R")
 
+# import internal functions 
+source("~/GitHub/Titanic-Group-B/scripts/2_2.R")
 
 ### Task 4
 
-
-# Import relevant scripts containing functions
-source("scripts/2_1.R") # Functions for descriptive analysis
-source("scripts/2_2.R") # Helper functions
 
 # Ensure categorical variables are factors
 titanic$Survived <- as.factor(titanic$Survived)
