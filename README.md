@@ -16,3 +16,6 @@ Before you start, set the working directory in RStudio to the
 - Iqma Nadhirah Binti Muammar Quaddafi - nadhirah.muammar@tu-dortmund.de
 - Yee Pei Jun - peijun.yee@tu-dortmund.de
 - Ganeisraaj Kathiravan - kathiravan.ganeisraaj@tu-dortmund.de
+
+# Status
+Archived, public and submitted (23.02.2025; 20:52)
